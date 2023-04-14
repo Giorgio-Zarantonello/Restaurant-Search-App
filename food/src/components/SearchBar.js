@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     inputStyle: {
         // borderColor : 'black',
         // borderWidth : 1 ,
-        flex: 1,
+        flex: 1,asd
         fontSize: 18
 
     },
