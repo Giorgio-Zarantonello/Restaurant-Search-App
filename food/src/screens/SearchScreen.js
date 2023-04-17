@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import SearchBar from '../components/SearchBar';
 import yelp from '../api/yelp';
 import useResults from '../hooks/useResults';
@@ -18,7 +18,8 @@ const SearchScreen = () => {
   };
 
   return (
-    <View>
+    // we don t have anything wrapping the intern , now i can scroll the view without a wrapper , not harming the layout 
+    <>
       <SearchBar
         searchTerm={term}
         onTermChange={setTerm}
@@ -26,16 +27,26 @@ const SearchScreen = () => {
       />
       {
         errorMessage
-          ? <Text>{errorMessage}</Text> : null}
-      <Text>We have found {results.length} results</Text>
-      <ResultsList results={filterResultsByPrice('$')} title="Cost Effective" />
-      <ResultsList results={filterResultsByPrice('$$')} title="Bit Pricier" />
-      <ResultsList results={filterResultsByPrice('$$$')} title="Big Spender" />
-    </View>
+          ? <Text>{errorMessage}</Text>
+          : null
+      }
+      {/* <Text>We have found {results.length} results</Text> */}
+      <ScrollView>
+        <ResultsList results={filterResultsByPrice('$')} title="Cost Effective" />
+        <ResultsList results={filterResultsByPrice('$')} title="Cost Effective" />
+        <ResultsList results={filterResultsByPrice('$$')} title="Bit Pricier" />
+        <ResultsList results={filterResultsByPrice('$$$')} title="Big Spender" />
+      </ScrollView>
+
+    </>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  }
+});
 
 export default SearchScreen;
 
