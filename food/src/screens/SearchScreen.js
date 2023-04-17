@@ -7,8 +7,8 @@ import useResults from '../hooks/useResults';
 
 const SearchScreen = () => {
   const [term, setTerm] = useState('');
-  const [searchApi , results , errorMessage] = useResults('');
- 
+  const [searchApi, results, errorMessage] = useResults('');
+
   return (
     <View>
       <SearchBar
