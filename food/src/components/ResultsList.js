@@ -21,7 +21,6 @@ const ResultsList = ({ title, results }) => {
                 }
 
             />
-            <Text> Results : {results.length}</Text>
         </View>
     )
 }
