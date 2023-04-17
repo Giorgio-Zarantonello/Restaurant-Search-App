@@ -8,13 +8,13 @@ const SearchScreen = () => {
   const [results, setResults] = useState([]);
   const [errorMessage, setErrorMessage] = useState('');
 
-  const searchApi = async () => {
+  const searchApi = async passedSearchTerm => {
     try {
       const response = await yelp.get('/search', {
         params: {
           limit: 50,
           //term : term in ES6 Syntax
-          term,
+          term : passedSearchTerm,
           location: 'san jose'
         }
       });
@@ -25,12 +25,22 @@ const SearchScreen = () => {
     }
   };
 
+  // call searchApi when component is 
+  // first rendered  : BAD CODE ! IT LOOPS 
+  // watch FLOW IN SEARCHSCREEN COMPONENT , V1 
+
+  // searchApi('pasta');
+
+  
+
+
+
   return (
     <View>
       <SearchBar
         searchTerm={term}
         onTermChange={setTerm}
-        onTermSubmit={searchApi}
+        onTermSubmit={ () => searchApi(term)}
       />
       {
         errorMessage ?
@@ -46,3 +56,17 @@ const SearchScreen = () => {
 const styles = StyleSheet.create({});
 
 export default SearchScreen;
+
+
+/**
+ * 
+ * FLOW IN SEARCHSCREEN COMPONENT , V1 
+ * 
+ * SearchScreen function called 
+ * Nothing visible on screen 
+ * user enters a search term , submits it , request to Yelp is made 
+ * Get search results , call setter 
+ * Updated state causes component to render 
+ * we have now something to show to the user 
+ * 
+ */
