@@ -3,7 +3,7 @@
 <br>
 
 
-<h4 align="center"> Sezione 8 del corso "The Complete React Native + Hooks Course" @ Udemy </h4>
+<h4 align="center"> Sezione 8-11 del corso "The Complete React Native + Hooks Course" @ Udemy </h4>
 <br>
 
 <!-- PROJECT LOGO -->
