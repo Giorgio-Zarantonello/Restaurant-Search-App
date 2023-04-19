@@ -1,16 +1,20 @@
-# Restaurant-Search-App
+
+<h3 align="center">Restaurant-Search-App</h3>
+<br>
+
+
+<h4 align="center"> Sezione 8 del corso "The Complete React Native + Hooks Course" @ Udemy </h4>
+<br>
+
 <!-- PROJECT LOGO -->
-<br />
 <div align="center">
   <a href="https://github.com/Giorgio-Zarantonello/Restaurant-Search-App">
     <img width="390" height="844" src="https://user-images.githubusercontent.com/20912128/233076164-50ad4c9e-e958-4a41-99fe-87551331d122.png" alt="Logo" width="80" height="80">
 
   </a>
 </div>
-<h3 align="Restaurant-Search-App</h3>
-Sezione 8 del corso "The Complete React Native + Hooks Course" @ Udemy 
-
 <br><br>
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
