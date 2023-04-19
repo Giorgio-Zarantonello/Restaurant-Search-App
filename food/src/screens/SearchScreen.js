@@ -33,9 +33,9 @@ const SearchScreen = () => {
       }
       {/* <Text>We have found {results.length} results</Text> */}
       <ScrollView>
-        <ResultsList results={filterResultsByPrice('$')} title="Cost Effective"  />
-        <ResultsList results={filterResultsByPrice('$')} title="Cost Effective"  />
-        <ResultsList results={filterResultsByPrice('$$')} title="Bit Pricier"  />
+        <ResultsList results={filterResultsByPrice('$')} title="Cost Effective" />
+        <ResultsList results={filterResultsByPrice('$$')} title="Bit Pricier" />
+        <ResultsList results={filterResultsByPrice('$$$')} title="Big Spender" />
       </ScrollView>
 
     </>
